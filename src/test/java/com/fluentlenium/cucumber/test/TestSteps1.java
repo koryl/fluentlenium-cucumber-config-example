@@ -1,5 +1,8 @@
 package com.fluentlenium.cucumber.test;
 
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -18,5 +21,15 @@ public class TestSteps1 extends BaseTest {
     @Then("^the expected page is open$")
     public void checkIfTitleCorrect() {
         assertTrue(window().title().contains(DUCK_DUCK_GO_TITLE));
+    }
+
+    @Before
+    public void beforeScenario(Scenario scenario) {
+        before(scenario);
+    }
+
+    @After
+    public void afterScenario(Scenario scenario) {
+        after(scenario);
     }
 }

@@ -1,6 +1,6 @@
 package com.fluentlenium.cucumber.test;
 
-import org.fluentlenium.adapter.cucumber.FluentCucumberTest;
+import com.fluentlenium.cucumber.test.config.FluentCucumberTest;
 import org.fluentlenium.configuration.FluentConfiguration;
 
 @FluentConfiguration(webDriver = "firefox")
